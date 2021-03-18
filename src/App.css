@@ -1,18 +1,17 @@
 :root {
-
-  --text-left:rgb(201, 154, 0);
-  --text-right:rgb(199, 0, 199);
-  --text-left2:rgb(199, 0, 199);
-  --text-right2:rgb(255, 238, 0);
+  --text-left: rgb(201, 154, 0);
+  --text-right: rgb(199, 0, 199);
+  --text-left2: rgb(199, 0, 199);
+  --text-right2: rgb(255, 238, 0);
 
   --letter: #ffffff;
-  --button-background:red;
-  --button-border:rgb(88, 6, 88);
+  --button-background: red;
+  --button-border: rgb(88, 6, 88);
 
-  --button-before-1:rgb(207, 163, 19);
-  --button-before-2:rgb(204, 18, 204);
-  --button-after-1:rgb(201, 154, 0);
-  --button-after-2:rgb(199, 0, 199);
+  --button-before-1: rgb(207, 163, 19);
+  --button-before-2: rgb(204, 18, 204);
+  --button-after-1: rgb(201, 154, 0);
+  --button-after-2: rgb(199, 0, 199);
   --button-shadow: rgb(88, 6, 88);
 
   /* --button-before-1:rgb(73,132,180);
@@ -22,12 +21,9 @@
   --button-shadow: #2b638f;
   --button-background:#538fbe;
   --button-border:#2d6898;  */
-
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 body {
   background-color: #070042;
@@ -52,38 +48,42 @@ body {
   display: flex;
   flex-direction: row;
   padding: 0px 20px 40px 40px;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   z-index: 2;
-  position:relative;
+  position: relative;
 }
 
 .container {
   min-width: 550px;
   padding: 0px;
-  background-color: rgba(255, 255, 255, 0.10);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.178);
   z-index: 2;
-  position:relative;
+  position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
 h1 {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   color: #fff;
   font-weight: 900;
   font-size: 2rem;
-  padding:10px 0 0 0;
-  margin:0;
+  padding: 10px 0 0 0;
+  margin: 0;
   height: 50px;
   border-radius: 5px;
-  background: -webkit-linear-gradient(left, var(--text-left) , var(--text-right));
+  background: -webkit-linear-gradient(
+    left,
+    var(--text-left),
+    var(--text-right)
+  );
   background: -o-linear-gradient(right, var(--text-left), var(--text-right));
   background: -moz-linear-gradient(right, var(--text-left), var(--text-right));
-  background: linear-gradient(to right, var(--text-left) , var(--text-right)); 
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, var(--text-left), var(--text-right));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .game-board {
@@ -92,8 +92,7 @@ h1 {
 
 .game-info {
   margin-left: 10px;
-  
-  
+
   width: 200px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
@@ -106,30 +105,37 @@ h1 {
 }
 
 .status {
-  margin:0;
+  margin: 0;
   padding: 0;
   z-index: 2;
   color: #ffffff;
   font-weight: 800;
-  background: -webkit-linear-gradient(left, var(--text-left2) , var(--text-right2));
+  background: -webkit-linear-gradient(
+    left,
+    var(--text-left2),
+    var(--text-right2)
+  );
   background: -o-linear-gradient(right, var(--text-left2), var(--text-right2));
-  background: -moz-linear-gradient(right, var(--text-left2), var(--text-right2));
-  background: linear-gradient(to right, var(--text-left2) , var(--text-right2)); 
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+  background: -moz-linear-gradient(
+    right,
+    var(--text-left2),
+    var(--text-right2)
+  );
+  background: linear-gradient(to right, var(--text-left2), var(--text-right2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 ul {
   padding-left: 25px;
   list-style-type: none;
   z-index: 2;
-  margin:0;
-  
+  margin: 0;
 }
 
 button {
   color: #ffffff;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   outline: none;
   z-index: 2;
   font-weight: 600;
@@ -150,22 +156,26 @@ button:active {
   z-index: 1;
   position: absolute;
   bottom: 5%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  padding:5px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 5px;
   text-decoration: none;
   font-weight: 700;
-  font-size:1rem;
-
+  font-size: 1rem;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 5px;
   transition-duration: 0.5s;
-  background: -webkit-linear-gradient(left, var(--text-left) , var(--text-right));
+  /* background: -webkit-linear-gradient(
+    left,
+    var(--text-left),
+    var(--text-right)
+  );
   background: -o-linear-gradient(right, var(--text-left), var(--text-right));
   background: -moz-linear-gradient(right, var(--text-left), var(--text-right));
-  background: linear-gradient(to right, var(--text-left) , var(--text-right)); 
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, var(--text-left), var(--text-right));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 a:hover {
@@ -177,25 +187,28 @@ a:hover {
 
 /* ---------------------------------------- */
 
-
 .big-circle-1 {
   z-index: 0;
   position: absolute;
-  top:25%;
-  left:10%;
+  top: 25%;
+  left: 10%;
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: rgb(225,14,108);
-  background: linear-gradient(0deg,rgb(225,31,65) 0%, rgb(225, 151, 14) 100%);
+  background: rgb(225, 14, 108);
+  background: linear-gradient(
+    0deg,
+    rgb(225, 31, 65) 0%,
+    rgb(225, 151, 14) 100%
+  );
   filter: blur(40px);
 }
 
 .triangle {
   position: absolute;
-  top:5%;
-  left:50%;
+  top: 5%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 0;
   height: 0;
@@ -204,14 +217,14 @@ a:hover {
   border-bottom: 200px solid rgb(202, 199, 12);
   filter: blur(10px);
   transform: rotate(30deg);
-  z-index: 0;      
+  z-index: 0;
 }
 
 .moon {
   z-index: 0;
   position: absolute;
-  top:40%;
-  left:70%;
+  top: 40%;
+  left: 70%;
   transform: translate(-50%, -50%);
   width: 500px;
   height: 500px;
@@ -220,11 +233,7 @@ a:hover {
   filter: blur(20px);
 }
 
-
 /* ---------------------------------------- */
-
-
-
 
 .square {
   z-index: 2;
@@ -243,55 +252,100 @@ a:hover {
   color: var(--letter);
   background-color: var(--button-background);
   border: 1px solid var(--button-border);
-  
-  background-image: linear-gradient(bottom, var(--button-before-1) 0%, var(--button-before-2) 100%);
-  background-image: -o-linear-gradient(bottom, var(--button-before-1) 0%, var(--button-before-2) 100%);
-  background-image: -moz-linear-gradient(bottom, var(--button-before-1) 0%, var(--button-before-2) 100%);
-  background-image: -webkit-linear-gradient(bottom, var(--button-before-1) 0%, var(--button-before-2) 100%);
-  background-image: -ms-linear-gradient(bottom, var(--button-before-1) 0%, var(--button-before-2) 100%);
+
+  background-image: linear-gradient(
+    bottom,
+    var(--button-before-1) 0%,
+    var(--button-before-2) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    var(--button-before-1) 0%,
+    var(--button-before-2) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    var(--button-before-1) 0%,
+    var(--button-before-2) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    var(--button-before-1) 0%,
+    var(--button-before-2) 100%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    var(--button-before-1) 0%,
+    var(--button-before-2) 100%
+  );
 
   background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0, var(--button-before-1)),
-        color-stop(1, var(--button-before-2))
-        
-    );
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, var(--button-before-1)),
+    color-stop(1, var(--button-before-2))
+  );
 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-  -webkit-box-shadow: 0px 6px 0px var(--button-shadow), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  -moz-box-shadow: 0px 6px 0px var(--button-shadow), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  box-shadow: 0px 6px 0px var(--button-shadow), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
- }
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 6px 0px var(--button-shadow),
+    0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0px 6px 0px var(--button-shadow),
+    0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 6px 0px var(--button-shadow), 0px 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
 
 /* ------ */
 
- .square:active {
-  background-image: linear-gradient(bottom, var(--button-after-1) 0%, var(--button-after-2) 100%);
-  background-image: -o-linear-gradient(bottom, var(--button-after-1) 0%, var(--button-after-2) 100%);
-  background-image: -moz-linear-gradient(bottom, var(--button-after-1) 0%, var(--button-after-2) 100%);
-  background-image: -webkit-linear-gradient(bottom, var(--button-after-1) 0%, var(--button-after-2) 100%);
-  background-image: -ms-linear-gradient(bottom, var(--button-after-1) 0%, var(--button-after-2) 100%);
+.square:active {
+  background-image: linear-gradient(
+    bottom,
+    var(--button-after-1) 0%,
+    var(--button-after-2) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    var(--button-after-1) 0%,
+    var(--button-after-2) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    var(--button-after-1) 0%,
+    var(--button-after-2) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    var(--button-after-1) 0%,
+    var(--button-after-2) 100%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    var(--button-after-1) 0%,
+    var(--button-after-2) 100%
+  );
 
   background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, var(--button-after-1)),
-      color-stop(1, var(--button-after-2))
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, var(--button-after-1)),
+    color-stop(1, var(--button-after-2))
   );
- }
+}
 
- /* ------ */
+/* ------ */
 
- .square:hover {
+.square:hover {
   cursor: pointer;
 }
 
 .square:focus {
-  outline:none;
+  outline: none;
 }
